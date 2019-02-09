@@ -1,2 +1,2 @@
-#CRUDPlay
+# CRUDPlay
 This is a simple weight tracking app with full CRUD capabilities. For example, you may accidentally enter in the wrong number and need to edit it. You also may want to delete the number for some reason.  This is just a simple CRUD practice app, hence the name CRUD Play. 
