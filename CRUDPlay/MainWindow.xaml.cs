@@ -31,6 +31,7 @@ namespace CRUDPlay
         private void SaveNumberButton_OnClick(object sender, RoutedEventArgs e)
         {
              InsertWeight();
+             ReadDatabase();
         }
 
         void InsertWeight()
