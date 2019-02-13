@@ -188,3 +188,6 @@ bin
 obj
 
 *.lock
+.vs/CRUDPlay/v15/Server/sqlite3/storage.ide-wal
+.vs/CRUDPlay/v15/Server/sqlite3/storage.ide
+.vs/CRUDPlay/v15/Server/sqlite3/storage.ide-shm
