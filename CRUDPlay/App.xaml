@@ -15,7 +15,7 @@
             <Setter Property="IsEnabled" Value="False"/>
             </Style>
         <Style TargetType="ListView">
-            <Setter Property="Height" Value="170"/>
+            <Setter Property="Height" Value="190"/>
         </Style>
         <!-- Explicit Styles -->
         <Style TargetType="TextBlock" x:Key="Headline">
