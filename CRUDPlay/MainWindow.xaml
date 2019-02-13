@@ -16,12 +16,10 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel>
-                            <TextBlock Text="Weight: "
-                                       Style="{StaticResource Headline}"/>
+                            <TextBlock Style="{StaticResource Headline}"/>
                             <TextBlock Text="{Binding Weights}"
                                        Style="{StaticResource Information}"/>
-                            <TextBlock Text="Date Created: "
-                                       Style="{StaticResource CreatedHeadline}"/>
+                            <TextBlock Style="{StaticResource CreatedHeadline}"/>
                             <TextBlock Text="{Binding DateCreated}"/>
                         </StackPanel>
                     </DataTemplate>
