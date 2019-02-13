@@ -46,12 +46,18 @@ namespace CRUDPlay
             {
                 conn.CreateTable<Weight>();
                 conn.Insert(weight);
+                SaveNumberButton.Background = new SolidColorBrush(Colors.Chartreuse);
+                SaveNumberButton.Foreground = new SolidColorBrush(Colors.Black);
             }
+
         }
 
         void ReadDatabase()
         {
-            var weight = new Weight();
+            var weight = new Weight()
+            {
+
+            };
             List<Weight> weights;
 
             using (var conn = new SQLiteConnection(App.databasePath))
