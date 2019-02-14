@@ -54,10 +54,6 @@ namespace CRUDPlay
 
         void ReadDatabase()
         {
-            var weight = new Weight()
-            {
-
-            };
             List<Weight> weights;
 
             using (var conn = new SQLiteConnection(App.databasePath))
@@ -68,6 +64,22 @@ namespace CRUDPlay
 
             if (weights != null)
                 DNumListView.ItemsSource = weights;
+        }
+
+        void DeleteWeight()
+        {
+            using (var conn = new SQLiteConnection(App.databasePath))
+            {
+
+            }
+        }
+
+        void UpdateWeight()
+        {
+            using (var conn = new SQLiteConnection(App.databasePath))
+            {
+
+            }
         }
 
         private void NumberInputTextBox_OnTextChanged(object sender, TextChangedEventArgs e)
