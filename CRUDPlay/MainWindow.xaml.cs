@@ -22,6 +22,8 @@ namespace CRUDPlay
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        List<Weight> weights;
         public MainWindow()
         {
             InitializeComponent();
@@ -54,7 +56,6 @@ namespace CRUDPlay
 
         void ReadDatabase()
         {
-            List<Weight> weights;
 
             using (var conn = new SQLiteConnection(App.databasePath))
             {
@@ -70,7 +71,8 @@ namespace CRUDPlay
         {
             using (var conn = new SQLiteConnection(App.databasePath))
             {
-
+                conn.CreateTable<Weight>();
+                conn.Delete(weights);
             }
         }
 
@@ -78,7 +80,8 @@ namespace CRUDPlay
         {
             using (var conn = new SQLiteConnection(App.databasePath))
             {
-
+                conn.CreateTable<Weight>();
+                conn.Update(weights);
             }
         }
 

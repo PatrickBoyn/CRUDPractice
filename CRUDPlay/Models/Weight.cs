@@ -7,7 +7,7 @@ using SQLite;
 
 namespace CRUDPlay.Models
 {
-    class Weight
+    public class Weight
     {
         [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
