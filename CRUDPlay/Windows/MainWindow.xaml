@@ -15,13 +15,6 @@
             <ListView x:Name="DNumListView">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <StackPanel>
-                            <TextBlock Style="{StaticResource Headline}"/>
-                            <TextBlock Text="{Binding Weights}"
-                                       Style="{StaticResource Information}"/>
-                            <TextBlock Style="{StaticResource CreatedHeadline}"/>
-                            <TextBlock Text="{Binding DateCreated}"/>
-                        </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
