@@ -26,8 +26,8 @@ namespace CRUDPlay.UserControls
 
         public Weight Weight
         {
-            get { return (Weight)GetValue(WeightProperty); }
-            set { SetValue(WeightProperty, value); }
+            get => (Weight)GetValue(WeightProperty);
+            set => SetValue(WeightProperty, value);
         }
 
         // Using a DependencyProperty as the backing store for Weight.  This enables animation, styling, binding, etc...
@@ -37,6 +37,11 @@ namespace CRUDPlay.UserControls
         private static void DisplayText(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             var control = d as DisplayWeightsControl;
+            if (control != null)
+            {
+                control.WeightTextBlock.Text = (e.NewValue as Weight).Weights.ToString();
+                control.DateCreatedTextBlock.Text = (e.NewValue as Weight).DateCreated.ToString();
+            }
         }
 
 
