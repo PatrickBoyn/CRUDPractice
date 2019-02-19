@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CRUDPlay"
+        xmlns:uc="clr-namespace:CRUDPlay.UserControls"
         mc:Ignorable="d"
         Title="Testing CRUD With SQLite" Height="300" Width="350">
     <Grid>
@@ -15,6 +16,7 @@
             <ListView x:Name="DNumListView">
                 <ListView.ItemTemplate>
                     <DataTemplate>
+                        <uc:DisplayWeightsControl Weight="{Binding}"/>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
