@@ -32,12 +32,16 @@ namespace CRUDPlay.UserControls
 
         // Using a DependencyProperty as the backing store for Weight.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty WeightProperty =
-            DependencyProperty.Register("Weight", typeof(Weight), typeof(DisplayWeightsControl), new PropertyMetadata(new Weight(), DisplayText));
+            DependencyProperty.Register("Weight", typeof(Weight), typeof(DisplayWeightsControl), new PropertyMetadata(new Weight()
+            {
+                Weights = 123,
+                DateCreated = DateTime.Now
+            }, DisplayText));
 
         private static void DisplayText(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            var control = d as DisplayWeightsControl;
-            if (control != null)
+            var control = (DisplayWeightsControl) d;
+            if (d != null)
             {
                 control.WeightTextBlock.Text = (e.NewValue as Weight).Weights.ToString();
                 control.DateCreatedTextBlock.Text = (e.NewValue as Weight).DateCreated.ToString();
